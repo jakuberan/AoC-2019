@@ -1,7 +1,9 @@
+# Import libraries
+from src.day05_supp import run_program
+
 # Define path
 data_path = "data/day02"
 #data_path = "data/day02_test"
-from src.day05_supp import run_program
 
 # Read data
 f = open(data_path, "r")

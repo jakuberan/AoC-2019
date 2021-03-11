@@ -1,5 +1,4 @@
 # Import libraries
-# import numpy as np
 from src.day05_supp import run_program
 
 # Define path

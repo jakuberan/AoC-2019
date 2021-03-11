@@ -1,5 +1,4 @@
 # Import libraries
-# import numpy as np
 from src.day03_supp import mark_wire, wire_intersect, get_distances
 
 # Define path
