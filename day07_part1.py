@@ -22,7 +22,7 @@ max_so_far = 0
 for permut in perms:
     
     # Obtain create initial programs
-    prgs = [data_in.copy()] * 5
+    prgs = [data_in.copy() for _ in range(5)]
     pos  = [0] * 5
     
     # Initial amplifier phase settings
@@ -34,12 +34,12 @@ for permut in perms:
                 )
     
     # Run with subsequent inputs from previous amplifiers
-    out = 0
+    out_tmp = 0
     for num in range(5):
-        inp = out
-        out = None
-        while not isinstance(out, int):
-            prgs[num], pos[num], out = run_program(prgs[num], pos[num], inp)
-    max_so_far = max(max_so_far, out)
+        out = out_tmp
+        while isinstance(out, int):
+            out_tmp = out
+            prgs[num], pos[num], out = run_program(prgs[num], pos[num], out)
+    max_so_far = max(max_so_far, out_tmp)
         
 print("Last amplifier biggest output: " + str(max_so_far))
