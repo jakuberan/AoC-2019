@@ -14,7 +14,6 @@ else: memory = 5
 # Read data
 f = open(data_path, "r")
 for x in f:
-    # Convert to int and append
     data_in = [int(c) for c in x.split(',')]
 
 # Apply transformations

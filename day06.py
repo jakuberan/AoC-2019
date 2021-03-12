@@ -9,7 +9,6 @@ orbits = {'COM': []}
 # Save orbits to dictionary
 f = open(data_path, "r")
 for x in f:
-    # Convert to int and append
     line = x.strip().split(')')
     if line[0] not in orbits.keys(): orbits[line[0]] = []
     orbits[line[0]].append(line[1])

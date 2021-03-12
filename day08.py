@@ -11,7 +11,6 @@ layers_stats = []
 # read input data
 f = open(data_path, "r")
 for x in f:
-    # Convert to int and append
     line = x.strip()
 
 # Produce layers and their stats
