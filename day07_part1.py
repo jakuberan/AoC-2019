@@ -34,12 +34,9 @@ for permut in perms:
                 )
     
     # Run with subsequent inputs from previous amplifiers
-    out_tmp = 0
+    out = 0
     for num in range(5):
-        out = out_tmp
-        while isinstance(out, int):
-            out_tmp = out
-            prgs[num], pos[num], out = run_program(prgs[num], pos[num], out)
-    max_so_far = max(max_so_far, out_tmp)
+        prgs[num], pos[num], out = run_program(prgs[num], pos[num], out)
+    max_so_far = max(max_so_far, out)
         
 print("Last amplifier biggest output: " + str(max_so_far))
