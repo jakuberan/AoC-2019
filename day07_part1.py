@@ -11,7 +11,7 @@ data_path = "data/day07"
 # Read data
 f = open(data_path, "r")
 for x in f:
-    data_in = [int(c) for c in x.split(',')]
+    data_in = {i: int(c) for i, c in enumerate(x.split(','))}
 
 # Get permutations
 perms = perm([i for i in range(5)])
